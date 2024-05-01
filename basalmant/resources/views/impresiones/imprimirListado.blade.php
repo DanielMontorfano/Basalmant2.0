@@ -112,32 +112,26 @@ body {
 
 <!-- Envuelva el contenido de su PDF dentro de una etiqueta principal -->
 <main>
-  <table id="miTabla">
+  <table>
     <thead>
-      <tr ALIGN=center>
-        <th>Nº</th>
-        <th>{{$T1}}</th>
-        <th>{{$T2}}</th>
-        <th>{{$T3}}</th>
-        <th></th>
-        <th></th>
-      </tr>
+        <tr>
+            <th>Equipo</th>
+            <th>Descripción</th>
+            <th>Marca</th>
+            <!-- Agrega más columnas según sea necesario -->
+        </tr>
     </thead>
-
     <tbody>
-      <?php $i = 1; ?>
-      @foreach($listados as $listado)
-      <tr ALIGN=left>
-        <td>{{ $i++ }}</td> 
-        <td>{{ $listado['var1'] }}</td> 
-        <td>{{ $listado['var2'] }}</td>
-        <td>{{ $listado['var3'] }}</td>
-        <td></td>
-        <td></td>
-      </tr>
-      @endforeach
+        @foreach($listados as $listado)
+        <tr>
+            <td>{{ $listado['var1'] }}</td>
+            <td>{{ $listado['var2'] }}</td>
+            <td>{{ $listado['var3'] }}</td>
+            <!-- Agrega más celdas según sea necesario -->
+        </tr>
+        @endforeach
     </tbody>
-  </table>
+</table>
 </main>
 
 

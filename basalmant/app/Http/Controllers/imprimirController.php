@@ -154,6 +154,7 @@ $dompdf->stream(); */
       //echo'ENTRO';
       $pdf = PDF::loadView('impresiones.imprimirListado', compact('listados','titulo','T1','T2','T3','T4','T5'));
       $variable="Listado" . $id .".pdf";
+     // return $variable;
       return $pdf->download($variable); 
      // return view('impresiones.imprimirListado', compact('listados','titulo'));
      // return;
